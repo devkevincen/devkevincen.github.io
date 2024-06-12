@@ -137,6 +137,24 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Github 配置 SSH
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 检查你的电脑是否已经存在 SSH key ls -al ~/.ssh 如果存在，会显示 id_rsa 和 id_rsa.pub 两个文件，跳到第三步骤
+2. 生成新的 SSH key 指令中的 your_email@example.com 部分，替换为你注册 GitHub 时的邮箱 https://github.com/settings/emails
+ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34; 出现的提示一路回车即可
+3. 添加新的 SSH key 到 Github 执行以下命令，并复制输出结果
+cat ~/.ssh/id_ed25519.pub 访问 https://github.com/settings/keys，点击下图所示。
+将刚才复制的输出结果，进行粘贴。
+4. 测试是否成功 ssh -T git@github.com 完成 🎉 </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-13 00:26:04 +0800 CST'>六月 13, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Github 配置 SSH" href="https://devkevincen.github.io/post/knowledge/config-ssh-github/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">安装 Homebrew
     </h2>
   </header>

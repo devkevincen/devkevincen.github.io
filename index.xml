@@ -6,8 +6,21 @@
     <description>Recent content on 程序员小栈</description>
     <generator>Hugo -- 0.127.0</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 12 Jun 2024 23:25:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2024 00:26:04 +0800</lastBuildDate>
     <atom:link href="https://devkevincen.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github 配置 SSH</title>
+      <link>https://devkevincen.github.io/post/knowledge/config-ssh-github/</link>
+      <pubDate>Thu, 13 Jun 2024 00:26:04 +0800</pubDate>
+      <guid>https://devkevincen.github.io/post/knowledge/config-ssh-github/</guid>
+      <description>1. 检查你的电脑是否已经存在 SSH key ls -al ~/.ssh 如果存在，会显示 id_rsa 和 id_rsa.pub 两个文件，跳到第三步骤
+2. 生成新的 SSH key 指令中的 your_email@example.com 部分，替换为你注册 GitHub 时的邮箱 https://github.com/settings/emails
+ssh-keygen -t ed25519 -C &amp;#34;your_email@example.com&amp;#34; 出现的提示一路回车即可
+3. 添加新的 SSH key 到 Github 执行以下命令，并复制输出结果
+cat ~/.ssh/id_ed25519.pub 访问 https://github.com/settings/keys，点击下图所示。
+将刚才复制的输出结果，进行粘贴。
+4. 测试是否成功 ssh -T git@github.com 完成 🎉 </description>
+    </item>
     <item>
       <title>安装 Homebrew</title>
       <link>https://devkevincen.github.io/post/macos/install-homebrew/</link>
