@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on 程序员小栈</title>
-    <link>https://devkevincen.github.io/post/</link>
+    <link>https://www.coderstack.site/post/</link>
     <description>Recent content in Posts on 程序员小栈</description>
     <generator>Hugo -- 0.127.0</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 13 Jun 2024 00:26:04 +0800</lastBuildDate>
-    <atom:link href="https://devkevincen.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jun 2024 01:40:07 +0800</lastBuildDate>
+    <atom:link href="https://www.coderstack.site/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>前端常见面试题</title>
+      <link>https://www.coderstack.site/post/interview/frontend-interview-china/</link>
+      <pubDate>Thu, 13 Jun 2024 01:40:07 +0800</pubDate>
+      <guid>https://www.coderstack.site/post/interview/frontend-interview-china/</guid>
+      <description>HTML 对 HTML 语义化的理解 script 标签中 defer 和 async 的区别 HTML5 有哪些更新 行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？ CSS JavaScript 框架 React 聊一聊 React 的事件机制 Vue </description>
+    </item>
     <item>
       <title>Github 配置 SSH</title>
-      <link>https://devkevincen.github.io/post/knowledge/config-ssh-github/</link>
+      <link>https://www.coderstack.site/post/knowledge/config-ssh-github/</link>
       <pubDate>Thu, 13 Jun 2024 00:26:04 +0800</pubDate>
-      <guid>https://devkevincen.github.io/post/knowledge/config-ssh-github/</guid>
+      <guid>https://www.coderstack.site/post/knowledge/config-ssh-github/</guid>
       <description>1. 检查你的电脑是否已经存在 SSH key ls -al ~/.ssh 如果存在，会显示 id_rsa 和 id_rsa.pub 两个文件，跳到第三步骤
 2. 生成新的 SSH key 指令中的 your_email@example.com 部分，替换为你注册 GitHub 时的邮箱 https://github.com/settings/emails
 ssh-keygen -t ed25519 -C &amp;#34;your_email@example.com&amp;#34; 出现的提示一路回车即可
@@ -23,9 +30,9 @@ cat ~/.ssh/id_ed25519.pub 访问 https://github.com/settings/keys，点击下图
     </item>
     <item>
       <title>安装 Homebrew</title>
-      <link>https://devkevincen.github.io/post/macos/install-homebrew/</link>
+      <link>https://www.coderstack.site/post/macos/install-homebrew/</link>
       <pubDate>Wed, 12 Jun 2024 23:25:00 +0800</pubDate>
-      <guid>https://devkevincen.github.io/post/macos/install-homebrew/</guid>
+      <guid>https://www.coderstack.site/post/macos/install-homebrew/</guid>
       <description>前提 电脑中已安装 Git
 （新电脑到手/重装新系统后，强烈建议，首先去执行一次 xcode-select --install，即可安装一些基本的开发工具，如 Git）
 无科学上网 国内同学直接使用 Homebrew 官方的脚本，无科学上网，基本不可能一次安装成功

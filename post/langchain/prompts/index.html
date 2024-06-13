@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>LangChain: Prompts | 程序员小栈</title>
+<meta name="keywords" content="">
+<meta name="description" content=" LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
+API 可能会有变动，请以官方文档为准
+优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路
+好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格
+提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：
+假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。
+将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)
+Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(&#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字&#34;) prompt_template.format(number=1, country=&#39;中国&#39;, sex=&#39;女孩&#39;) 很像 JS 中的模版字符串，对吧 🤔
+对话模版 ChatPromptTemplate ">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.coderstack.site/post/langchain/prompts/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.coderstack.site/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.coderstack.site/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.coderstack.site/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.coderstack.site/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.coderstack.site/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="zh" href="https://www.coderstack.site/post/langchain/prompts/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:title" content="LangChain: Prompts" />
+<meta property="og:description" content=" LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
+API 可能会有变动，请以官方文档为准
+优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路
+好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格
+提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：
+假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。
+将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)
+Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(&#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字&#34;) prompt_template.format(number=1, country=&#39;中国&#39;, sex=&#39;女孩&#39;) 很像 JS 中的模版字符串，对吧 🤔
+对话模版 ChatPromptTemplate " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.coderstack.site/post/langchain/prompts/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-06-13T10:06:21+08:00" />
+<meta property="article:modified_time" content="2024-06-13T10:06:21+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LangChain: Prompts"/>
+<meta name="twitter:description" content=" LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
+API 可能会有变动，请以官方文档为准
+优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路
+好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格
+提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：
+假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。
+将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)
+Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(&#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字&#34;) prompt_template.format(number=1, country=&#39;中国&#39;, sex=&#39;女孩&#39;) 很像 JS 中的模版字符串，对吧 🤔
+对话模版 ChatPromptTemplate "/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://www.coderstack.site/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "LangChain 🦜",
+      "item": "https://www.coderstack.site/post/langchain/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "LangChain: Prompts",
+      "item": "https://www.coderstack.site/post/langchain/prompts/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "LangChain: Prompts",
+  "name": "LangChain: Prompts",
+  "description": " LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2\nAPI 可能会有变动，请以官方文档为准\n优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路\n好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格\n提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：\n假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。\n将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)\nPrompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(\u0026#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字\u0026#34;) prompt_template.format(number=1, country=\u0026#39;中国\u0026#39;, sex=\u0026#39;女孩\u0026#39;) 很像 JS 中的模版字符串，对吧 🤔\n对话模版 ChatPromptTemplate ",
+  "keywords": [
+    
+  ],
+  "articleBody": " LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2\nAPI 可能会有变动，请以官方文档为准\n优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路\n好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格\n提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：\n假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。\n将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)\nPrompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(\"你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字\") prompt_template.format(number=1, country='中国', sex='女孩') 很像 JS 中的模版字符串，对吧 🤔\n对话模版 ChatPromptTemplate ",
+  "wordCount" : "65",
+  "inLanguage": "zh",
+  "datePublished": "2024-06-13T10:06:21+08:00",
+  "dateModified": "2024-06-13T10:06:21+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.coderstack.site/post/langchain/prompts/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "程序员小栈",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.coderstack.site/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.coderstack.site/" accesskey="h" title="程序员小栈 (Alt + H)">程序员小栈</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      LangChain: Prompts
+    </h1>
+    <div class="post-meta"><span title='2024-06-13 10:06:21 +0800 CST'>六月 13, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><blockquote>
+<p>LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2</p>
+<p>API 可能会有变动，请以官方文档为准</p>
+</blockquote>
+<h2 id="优秀的提示词">优秀的提示词：<a hidden class="anchor" aria-hidden="true" href="#优秀的提示词">#</a></h2>
+<ul>
+<li>【立角色】：引导 AI 进入具体场景，赋予其行家身份</li>
+<li>【述问题】：告诉 AI 你的困惑和问题，以及背景信息</li>
+<li>【定目标】：告诉 AI 你的需求，希望达成的目标</li>
+<li>【补要求】：告诉 AI 回答时注意什么，或者如何回复</li>
+</ul>
+<p>不好的提示词：我想去海南玩，请你帮我做一份旅行攻路</p>
+<p>好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格</p>
+<h2 id="提示词模版">提示词模版：<a hidden class="anchor" aria-hidden="true" href="#提示词模版">#</a></h2>
+<ol>
+<li>将提示词提炼成模板</li>
+<li>实现提示词的复用、版本管理、动态变化等</li>
+</ol>
+<p>以上面的好的提示词举例：</p>
+<p>假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。</p>
+<p>将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， <code>y = f(x1, x2, ...)</code></p>
+<p><img loading="lazy" src="/img/format.png" alt=""  />
+</p>
+<h2 id="prompt-templates-提示此模版">Prompt Templates 提示此模版<a hidden class="anchor" aria-hidden="true" href="#prompt-templates-提示此模版">#</a></h2>
+<h3 id="字符串模版-prompttemplate">字符串模版 PromptTemplate<a hidden class="anchor" aria-hidden="true" href="#字符串模版-prompttemplate">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain.prompts <span style="color:#f92672">import</span> PromptTemplate
+</span></span><span style="display:flex;"><span>prompt_template <span style="color:#f92672">=</span> PromptTemplate<span style="color:#f92672">.</span>from_template(<span style="color:#e6db74">&#34;你是一位起名大师，帮我起</span><span style="color:#e6db74">{number}</span><span style="color:#e6db74">个具有</span><span style="color:#e6db74">{country}</span><span style="color:#e6db74">特色的</span><span style="color:#e6db74">{sex}</span><span style="color:#e6db74">名字&#34;</span>)
+</span></span><span style="display:flex;"><span>prompt_template<span style="color:#f92672">.</span>format(number<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, country<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;中国&#39;</span>, sex<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;女孩&#39;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="/img/langchain-demo01.png" alt=""  />
+</p>
+<p>很像 JS 中的模版字符串，对吧 🤔</p>
+<h3 id="对话模版-chatprompttemplate">对话模版 ChatPromptTemplate<a hidden class="anchor" aria-hidden="true" href="#对话模版-chatprompttemplate">#</a></h3>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://www.coderstack.site/">程序员小栈</a></span>
+        
+
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

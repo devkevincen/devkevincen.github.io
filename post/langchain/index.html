@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Categories | 程序员小栈</title>
+<title>LangChain 🦜 | 程序员小栈</title>
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="一起进入 AI 时代">
 <meta name="author" content="">
-<link rel="canonical" href="https://www.coderstack.site/categories/">
+<link rel="canonical" href="https://www.coderstack.site/post/langchain/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://www.coderstack.site/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://www.coderstack.site/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="https://www.coderstack.site/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://www.coderstack.site/categories/index.xml">
-<link rel="alternate" hreflang="zh" href="https://www.coderstack.site/categories/">
+<link rel="alternate" type="application/rss+xml" href="https://www.coderstack.site/post/langchain/index.xml">
+<link rel="alternate" hreflang="zh" href="https://www.coderstack.site/post/langchain/">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,15 +59,36 @@
 </noscript>
   
 
-<meta property="og:title" content="Categories" />
+<meta property="og:title" content="LangChain 🦜" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.coderstack.site/categories/" />
+<meta property="og:url" content="https://www.coderstack.site/post/langchain/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
+<meta name="twitter:title" content="LangChain 🦜"/>
 <meta name="twitter:description" content=""/>
 
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://www.coderstack.site/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "LangChain 🦜",
+      "item": "https://www.coderstack.site/post/langchain/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="list" id="top">
@@ -113,13 +134,36 @@
         </ul>
     </nav>
 </header>
-<main class="main">
+<main class="main"> 
 <header class="page-header">
-    <h1>Categories</h1>
+  <h1>
+    LangChain 🦜
+  </h1>
 </header>
+<div class="post-content"><p>一起进入 AI 时代</p>
 
-<ul class="terms-tags">
-</ul>
+
+</div>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">LangChain: Prompts
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
+API 可能会有变动，请以官方文档为准
+优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路
+好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格
+提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：
+假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。
+将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)
+Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(&#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字&#34;) prompt_template.format(number=1, country=&#39;中国&#39;, sex=&#39;女孩&#39;) 很像 JS 中的模版字符串，对吧 🤔
+对话模版 ChatPromptTemplate </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-13 10:06:21 +0800 CST'>六月 13, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to LangChain: Prompts" href="https://www.coderstack.site/post/langchain/prompts/"></a>
+</article>
     </main>
     
 <footer class="footer">
