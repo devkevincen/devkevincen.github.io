@@ -6,14 +6,21 @@
     <description>Recent content on 程序员小栈</description>
     <generator>Hugo -- 0.127.0</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 13 Jun 2024 10:06:21 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2024 18:03:31 +0800</lastBuildDate>
     <atom:link href="https://www.coderstack.site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hooks: useEffect</title>
+      <link>https://www.coderstack.site/post/react/useeffect/</link>
+      <pubDate>Thu, 13 Jun 2024 18:03:31 +0800</pubDate>
+      <guid>https://www.coderstack.site/post/react/useeffect/</guid>
+      <description></description>
+    </item>
     <item>
       <title>LangChain: Prompts</title>
       <link>https://www.coderstack.site/post/langchain/prompts/</link>
       <pubDate>Thu, 13 Jun 2024 10:06:21 +0800</pubDate>
       <guid>https://www.coderstack.site/post/langchain/prompts/</guid>
-      <description> LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
+      <description>LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
 API 可能会有变动，请以官方文档为准
 优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路
 好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格
@@ -21,7 +28,7 @@ API 可能会有变动，请以官方文档为准
 假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。
 将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)
 Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(&amp;#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字&amp;#34;) prompt_template.format(number=1, country=&amp;#39;中国&amp;#39;, sex=&amp;#39;女孩&amp;#39;) 很像 JS 中的模版字符串，对吧 🤔
-对话模版 ChatPromptTemplate </description>
+对话模版 ChatPromptTemplate from langchain_core.prompts import ChatPromptTemplate chat_template = ChatPromptTemplate.</description>
     </item>
     <item>
       <title>前端常见面试题</title>

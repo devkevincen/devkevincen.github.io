@@ -14,7 +14,7 @@
 <meta
   name="keywords"
   content=""
-/> <meta name="description" content=" LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
+/> <meta name="description" content="LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
 API 可能会有变动，请以官方文档为准
 优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路
 好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格
@@ -22,7 +22,7 @@ API 可能会有变动，请以官方文档为准
 假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。
 将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)
 Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(&#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字&#34;) prompt_template.format(number=1, country=&#39;中国&#39;, sex=&#39;女孩&#39;) 很像 JS 中的模版字符串，对吧 🤔
-对话模版 ChatPromptTemplate "> <meta name="author" content=""> <link rel="canonical" href="https://www.coderstack.site/post/langchain/prompts/">
+对话模版 ChatPromptTemplate from langchain_core.prompts import ChatPromptTemplate chat_template = ChatPromptTemplate."> <meta name="author" content=""> <link rel="canonical" href="https://www.coderstack.site/post/langchain/prompts/">
 <link
   crossorigin="anonymous"
   href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css"
@@ -76,7 +76,7 @@ name="msapplication-TileColor" content="#2e2e33"> <link rel="alternate" hreflang
   
 
 <meta property="og:title" content="LangChain: Prompts" />
-<meta property="og:description" content=" LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
+<meta property="og:description" content="LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
 API 可能会有变动，请以官方文档为准
 优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路
 好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格
@@ -84,7 +84,7 @@ API 可能会有变动，请以官方文档为准
 假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。
 将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)
 Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(&#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字&#34;) prompt_template.format(number=1, country=&#39;中国&#39;, sex=&#39;女孩&#39;) 很像 JS 中的模版字符串，对吧 🤔
-对话模版 ChatPromptTemplate " />
+对话模版 ChatPromptTemplate from langchain_core.prompts import ChatPromptTemplate chat_template = ChatPromptTemplate." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.coderstack.site/post/langchain/prompts/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2024-06-13T10:06:21+08:00" />
@@ -92,7 +92,7 @@ Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.p
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="LangChain: Prompts"/>
-<meta name="twitter:description" content=" LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
+<meta name="twitter:description" content="LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
 API 可能会有变动，请以官方文档为准
 优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路
 好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格
@@ -100,7 +100,7 @@ API 可能会有变动，请以官方文档为准
 假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。
 将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)
 Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(&#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字&#34;) prompt_template.format(number=1, country=&#39;中国&#39;, sex=&#39;女孩&#39;) 很像 JS 中的模版字符串，对吧 🤔
-对话模版 ChatPromptTemplate "/>
+对话模版 ChatPromptTemplate from langchain_core.prompts import ChatPromptTemplate chat_template = ChatPromptTemplate."/>
 
 
 <script type="application/ld+json">
@@ -135,12 +135,12 @@ Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.p
   "@type": "BlogPosting",
   "headline": "LangChain: Prompts",
   "name": "LangChain: Prompts",
-  "description": " LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2\nAPI 可能会有变动，请以官方文档为准\n优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路\n好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格\n提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：\n假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。\n将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)\nPrompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(\u0026#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字\u0026#34;) prompt_template.format(number=1, country=\u0026#39;中国\u0026#39;, sex=\u0026#39;女孩\u0026#39;) 很像 JS 中的模版字符串，对吧 🤔\n对话模版 ChatPromptTemplate ",
+  "description": "LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2\nAPI 可能会有变动，请以官方文档为准\n优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路\n好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格\n提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：\n假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。\n将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)\nPrompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(\u0026#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字\u0026#34;) prompt_template.format(number=1, country=\u0026#39;中国\u0026#39;, sex=\u0026#39;女孩\u0026#39;) 很像 JS 中的模版字符串，对吧 🤔\n对话模版 ChatPromptTemplate from langchain_core.prompts import ChatPromptTemplate chat_template = ChatPromptTemplate.",
   "keywords": [
     
   ],
-  "articleBody": " LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2\nAPI 可能会有变动，请以官方文档为准\n优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路\n好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格\n提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：\n假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。\n将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)\nPrompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(\"你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字\") prompt_template.format(number=1, country='中国', sex='女孩') 很像 JS 中的模版字符串，对吧 🤔\n对话模版 ChatPromptTemplate ",
-  "wordCount" : "65",
+  "articleBody": " LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2\nAPI 可能会有变动，请以官方文档为准\n优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路\n好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格\n提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：\n假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。\n将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)\nPrompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(\"你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字\") prompt_template.format(number=1, country='中国', sex='女孩') 很像 JS 中的模版字符串，对吧 🤔\n对话模版 ChatPromptTemplate from langchain_core.prompts import ChatPromptTemplate chat_template = ChatPromptTemplate.from_messages([ (\"system\", \"你是一个起名大师，你的名字叫{name}\"), (\"human\", \"你好{name}，你的感觉如何？\"), (\"ai\", \"你好！我状态非常好！\"), (\"human\", \"{user_input}\"), ]) chat_template.format_messages(name=\"小栈大师\", user_input=\"你叫什么名字？\") AI 将会回答你的最后一个问题，即这里的 user_input，其余内容将作为上下文 (context) 给到 AI 作为背景信息，以提高 AI 回答的准确度\n当然 LangChain 也非常灵活，从上面的图片中你可以看到 chat_template.format_messages 后是一个 list，每一项分别是 SystemMessage、HumanMessage、AIMessage，你可以亲自通过创建这些类的对象，比如：\nfrom langchain.schema import AIMessage, HumanMessage, SystemMessage sy = SystemMessage( content=\"你是一个起名大师\", additional_kwargs={\"大师姓名\": \"小栈大师\"} ) hm = HumanMessage( content=\"大师叫什么名字\", ) am = AIMessage( content=\"我叫小栈大师\", ) [sy, hm, am] 运行结果和上面是一样的\n当然，LangChain 已经将三个默认的三个角色进行模版化了，分别为 AIMessagePromptTemplate、SystemMessagePromptTemplate、HumanMessagePromptTemplate、ChatMessagePromptTemplate\nfrom langchain.prompts import AIMessagePromptTemplate from langchain.prompts import SystemMessagePromptTemplate from langchain.prompts import HumanMessagePromptTemplate from langchain.prompts import ChatMessagePromptTemplate prompt = \"你好，{name}\" ai_message_prompt = AIMessagePromptTemplate.from_template(template=prompt) ai_message_prompt.format(name=\"小栈大师\") sys_message_prompt = SystemMessagePromptTemplate.from_template(template=prompt) sys_message_prompt.format(name=\"Kevin\") hum_message_prompt = HumanMessagePromptTemplate.from_template(template=prompt) hum_message_prompt.format(name=\"Cen\") # 自定义角色 custom_message_prompt = ChatMessagePromptTemplate.from_template(role=\"程序员\", template=prompt) custom_message_prompt.format(name=\"程序员\") 自定义模版 直接举例演示\npip install langchain-openai\n# 代码注释生成器：解放双手，帮你写函数注释 from langchain.prompts import StringPromptTemplate def hello(): print(\"hello, coderstack\") return \"coderstack\" prompt = \"\"\"你是一位极其有经验和天赋的程序员，我将给你一个函数名称，你需要按照如下格式，输出这段代码的源代码、注释。 函数名称：{function_name} 源代码： {source_code} 注释： \"\"\" import inspect def get_source_code(name): return inspect.getsource(name) class CustomPrompt(StringPromptTemplate): def format(self, **kwargs) -\u003e str: # 获取源代码 source_code = get_source_code(kwargs[\"name\"]) prompt_to_ai = prompt.format( function_name=kwargs[\"name\"].__name__, source_code=source_code ) return prompt_to_ai cp = CustomPrompt(input_variables=[\"function_name\"]) prompt_after_format = cp.format(name=hello) print(prompt_after_format) print(\"====== 以上为传给 LLM 的 prompt ======\") from langchain_openai import OpenAI import os # 从你电脑中的环境变量中读取 api_key (Mac 的环境变量配置通常在 ~/.zshrc 文件中) api_key = os.getenv(\"OPENAI_API_KEY\") llm = OpenAI( model=\"gpt-3.5-turbo-instruct\", temperature=0, openai_api_key=api_key ) result_from_ai = llm.invoke(prompt_after_format) print(result_from_ai) 因此，我们可以看到，使用自定义模版可以比较轻松地写出一个自己想要的 prompt 模版，并且实现一个小的应用：代码注释生成器\n组合提示词 Pipeline prompts \u0026 Final prompt Final prompt：最终返回的提示词模版 Pipeline prompts：组成 Final prompt 的提示词模版 from langchain_core.prompts import PipelinePromptTemplate, PromptTemplate full_template = \"\"\"{introduction} {example} {start}\"\"\" full_prompt = PromptTemplate.from_template(full_template) introduction_template = \"\"\"你正在冒充{person}\"\"\" introduction_prompt = PromptTemplate.from_template(introduction_template) example_template = \"\"\"这是一个互动的例子： Q: {example_q} A: {example_a}\"\"\" example_prompt = PromptTemplate.from_template(example_template) start_template = \"\"\"现在，来真的吧！ Q: {input} A:\"\"\" start_prompt = PromptTemplate.from_template(start_template) input_prompts = [ (\"introduction\", introduction_prompt), (\"example\", example_prompt), (\"start\", start_prompt), ] pipeline_prompt = PipelinePromptTemplate( final_prompt=full_prompt, pipeline_prompts=input_prompts ) print(\"组合后模版的可传递参数 \", pipeline_prompt.input_variables, \"\\n\") print( pipeline_prompt.format( person=\"小栈\", example_q=\"你最喜欢的brand是什么\", example_a=\"Apple\", input=\"你最喜欢的App是什么\", ) ) 这样的写法看上去比较复杂，但是当我们遇到比较大的 prompt 模版，并且可以通过复用之前写过的 prompt 模版时，这样子的操作可以提升效率\n",
+  "wordCount" : "345",
   "inLanguage": "zh",
   "datePublished": "2024-06-13T10:06:21+08:00",
   "dateModified": "2024-06-13T10:06:21+08:00",
@@ -214,7 +214,36 @@ Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.p
     <div class="post-meta"><span title='2024-06-13 10:06:21 +0800 CST'>六月 13, 2024</span>
 
 </div>
-  </header> 
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e4%bc%98%e7%a7%80%e7%9a%84%e6%8f%90%e7%a4%ba%e8%af%8d" aria-label="优秀的提示词：">优秀的提示词：</a></li>
+                <li>
+                    <a href="#%e6%8f%90%e7%a4%ba%e8%af%8d%e6%a8%a1%e7%89%88" aria-label="提示词模版：">提示词模版：</a></li>
+                <li>
+                    <a href="#prompt-templates-%e6%8f%90%e7%a4%ba%e6%ad%a4%e6%a8%a1%e7%89%88" aria-label="Prompt Templates 提示此模版">Prompt Templates 提示此模版</a><ul>
+                        
+                <li>
+                    <a href="#%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%a8%a1%e7%89%88-prompttemplate" aria-label="字符串模版 PromptTemplate">字符串模版 PromptTemplate</a></li>
+                <li>
+                    <a href="#%e5%af%b9%e8%af%9d%e6%a8%a1%e7%89%88-chatprompttemplate" aria-label="对话模版 ChatPromptTemplate">对话模版 ChatPromptTemplate</a></li>
+                <li>
+                    <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e6%a8%a1%e7%89%88" aria-label="自定义模版">自定义模版</a></li>
+                <li>
+                    <a href="#%e7%bb%84%e5%90%88%e6%8f%90%e7%a4%ba%e8%af%8d-pipeline-prompts--final-prompt" aria-label="组合提示词 Pipeline prompts &amp; Final prompt">组合提示词 Pipeline prompts &amp; Final prompt</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content"><blockquote>
 <p>LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2</p>
 <p>API 可能会有变动，请以官方文档为准</p>
@@ -247,6 +276,165 @@ Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.p
 </p>
 <p>很像 JS 中的模版字符串，对吧 🤔</p>
 <h3 id="对话模版-chatprompttemplate">对话模版 ChatPromptTemplate<a hidden class="anchor" aria-hidden="true" href="#对话模版-chatprompttemplate">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain_core.prompts <span style="color:#f92672">import</span> ChatPromptTemplate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chat_template <span style="color:#f92672">=</span> ChatPromptTemplate<span style="color:#f92672">.</span>from_messages([
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;system&#34;</span>, <span style="color:#e6db74">&#34;你是一个起名大师，你的名字叫</span><span style="color:#e6db74">{name}</span><span style="color:#e6db74">&#34;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;human&#34;</span>, <span style="color:#e6db74">&#34;你好</span><span style="color:#e6db74">{name}</span><span style="color:#e6db74">，你的感觉如何？&#34;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;ai&#34;</span>, <span style="color:#e6db74">&#34;你好！我状态非常好！&#34;</span>),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;human&#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{user_input}</span><span style="color:#e6db74">&#34;</span>),
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chat_template<span style="color:#f92672">.</span>format_messages(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;小栈大师&#34;</span>, user_input<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;你叫什么名字？&#34;</span>)
+</span></span></code></pre></div><p><img loading="lazy" src="/img/langchain-demo02.png" alt=""  />
+</p>
+<p>AI 将会回答你的最后一个问题，即这里的 <code>user_input</code>，其余内容将作为上下文 (context) 给到 AI 作为背景信息，以提高 AI 回答的准确度</p>
+<p>当然 LangChain 也非常灵活，从上面的图片中你可以看到 <code>chat_template.format_messages</code> 后是一个 list，每一项分别是 <code>SystemMessage</code>、<code>HumanMessage</code>、<code>AIMessage</code>，你可以亲自通过创建这些类的对象，比如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain.schema <span style="color:#f92672">import</span> AIMessage, HumanMessage, SystemMessage
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sy <span style="color:#f92672">=</span> SystemMessage(
+</span></span><span style="display:flex;"><span>    content<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;你是一个起名大师&#34;</span>,
+</span></span><span style="display:flex;"><span>    additional_kwargs<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;大师姓名&#34;</span>: <span style="color:#e6db74">&#34;小栈大师&#34;</span>}
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>hm <span style="color:#f92672">=</span> HumanMessage(
+</span></span><span style="display:flex;"><span>    content<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;大师叫什么名字&#34;</span>,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>am <span style="color:#f92672">=</span> AIMessage(
+</span></span><span style="display:flex;"><span>    content<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;我叫小栈大师&#34;</span>,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[sy, hm, am]
+</span></span></code></pre></div><p><img loading="lazy" src="/img/langchain-demo03.png" alt=""  />
+</p>
+<p>运行结果和上面是一样的</p>
+<p>当然，LangChain 已经将三个默认的三个角色进行模版化了，分别为 <code>AIMessagePromptTemplate</code>、<code>SystemMessagePromptTemplate</code>、<code>HumanMessagePromptTemplate</code>、<code>ChatMessagePromptTemplate</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain.prompts <span style="color:#f92672">import</span> AIMessagePromptTemplate
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain.prompts <span style="color:#f92672">import</span> SystemMessagePromptTemplate
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain.prompts <span style="color:#f92672">import</span> HumanMessagePromptTemplate
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain.prompts <span style="color:#f92672">import</span> ChatMessagePromptTemplate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;你好，</span><span style="color:#e6db74">{name}</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ai_message_prompt <span style="color:#f92672">=</span> AIMessagePromptTemplate<span style="color:#f92672">.</span>from_template(template<span style="color:#f92672">=</span>prompt)
+</span></span><span style="display:flex;"><span>ai_message_prompt<span style="color:#f92672">.</span>format(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;小栈大师&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sys_message_prompt <span style="color:#f92672">=</span> SystemMessagePromptTemplate<span style="color:#f92672">.</span>from_template(template<span style="color:#f92672">=</span>prompt)
+</span></span><span style="display:flex;"><span>sys_message_prompt<span style="color:#f92672">.</span>format(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Kevin&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>hum_message_prompt <span style="color:#f92672">=</span> HumanMessagePromptTemplate<span style="color:#f92672">.</span>from_template(template<span style="color:#f92672">=</span>prompt)
+</span></span><span style="display:flex;"><span>hum_message_prompt<span style="color:#f92672">.</span>format(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Cen&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 自定义角色</span>
+</span></span><span style="display:flex;"><span>custom_message_prompt <span style="color:#f92672">=</span> ChatMessagePromptTemplate<span style="color:#f92672">.</span>from_template(role<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;程序员&#34;</span>, template<span style="color:#f92672">=</span>prompt)
+</span></span><span style="display:flex;"><span>custom_message_prompt<span style="color:#f92672">.</span>format(name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;程序员&#34;</span>)
+</span></span></code></pre></div><h3 id="自定义模版">自定义模版<a hidden class="anchor" aria-hidden="true" href="#自定义模版">#</a></h3>
+<p>直接举例演示</p>
+<p><code>pip install langchain-openai</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># 代码注释生成器：解放双手，帮你写函数注释</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain.prompts <span style="color:#f92672">import</span> StringPromptTemplate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hello</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;hello, coderstack&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;coderstack&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>prompt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;你是一位极其有经验和天赋的程序员，我将给你一个函数名称，你需要按照如下格式，输出这段代码的源代码、注释。
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">函数名称：</span><span style="color:#e6db74">{function_name}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">源代码：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#e6db74">{source_code}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">注释：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> inspect
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_source_code</span>(name):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> inspect<span style="color:#f92672">.</span>getsource(name)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomPrompt</span>(StringPromptTemplate):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">format</span>(self, <span style="color:#f92672">**</span>kwargs) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 获取源代码</span>
+</span></span><span style="display:flex;"><span>        source_code <span style="color:#f92672">=</span> get_source_code(kwargs[<span style="color:#e6db74">&#34;name&#34;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        prompt_to_ai <span style="color:#f92672">=</span> prompt<span style="color:#f92672">.</span>format(
+</span></span><span style="display:flex;"><span>            function_name<span style="color:#f92672">=</span>kwargs[<span style="color:#e6db74">&#34;name&#34;</span>]<span style="color:#f92672">.</span>__name__,
+</span></span><span style="display:flex;"><span>            source_code<span style="color:#f92672">=</span>source_code
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> prompt_to_ai
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cp <span style="color:#f92672">=</span> CustomPrompt(input_variables<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;function_name&#34;</span>])
+</span></span><span style="display:flex;"><span>prompt_after_format <span style="color:#f92672">=</span> cp<span style="color:#f92672">.</span>format(name<span style="color:#f92672">=</span>hello)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(prompt_after_format)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;====== 以上为传给 LLM 的 prompt ======&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain_openai <span style="color:#f92672">import</span> OpenAI
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 从你电脑中的环境变量中读取 api_key (Mac 的环境变量配置通常在 ~/.zshrc 文件中)</span>
+</span></span><span style="display:flex;"><span>api_key <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getenv(<span style="color:#e6db74">&#34;OPENAI_API_KEY&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>llm <span style="color:#f92672">=</span> OpenAI(
+</span></span><span style="display:flex;"><span>    model<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gpt-3.5-turbo-instruct&#34;</span>,
+</span></span><span style="display:flex;"><span>    temperature<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>    openai_api_key<span style="color:#f92672">=</span>api_key
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>result_from_ai <span style="color:#f92672">=</span> llm<span style="color:#f92672">.</span>invoke(prompt_after_format)
+</span></span><span style="display:flex;"><span>print(result_from_ai)
+</span></span></code></pre></div><p><img loading="lazy" src="/img/langchain-demo04.png" alt=""  />
+</p>
+<p>因此，我们可以看到，使用自定义模版可以比较轻松地写出一个自己想要的 prompt 模版，并且实现一个小的应用：代码注释生成器</p>
+<h3 id="组合提示词-pipeline-prompts--final-prompt">组合提示词 Pipeline prompts &amp; Final prompt<a hidden class="anchor" aria-hidden="true" href="#组合提示词-pipeline-prompts--final-prompt">#</a></h3>
+<ul>
+<li><code>Final prompt</code>：最终返回的提示词模版</li>
+<li><code>Pipeline prompts</code>：组成 <code>Final prompt</code> 的提示词模版</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain_core.prompts <span style="color:#f92672">import</span> PipelinePromptTemplate, PromptTemplate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>full_template <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#e6db74">{introduction}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#e6db74">{example}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span><span style="color:#e6db74">{start}</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>full_prompt <span style="color:#f92672">=</span> PromptTemplate<span style="color:#f92672">.</span>from_template(full_template)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>introduction_template <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;你正在冒充</span><span style="color:#e6db74">{person}</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>introduction_prompt <span style="color:#f92672">=</span> PromptTemplate<span style="color:#f92672">.</span>from_template(introduction_template)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>example_template <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;这是一个互动的例子：
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Q: </span><span style="color:#e6db74">{example_q}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">A: </span><span style="color:#e6db74">{example_a}</span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>example_prompt <span style="color:#f92672">=</span> PromptTemplate<span style="color:#f92672">.</span>from_template(example_template)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>start_template <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;现在，来真的吧！
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Q: </span><span style="color:#e6db74">{input}</span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">A:&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>start_prompt <span style="color:#f92672">=</span> PromptTemplate<span style="color:#f92672">.</span>from_template(start_template)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>input_prompts <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;introduction&#34;</span>, introduction_prompt),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;example&#34;</span>, example_prompt),
+</span></span><span style="display:flex;"><span>    (<span style="color:#e6db74">&#34;start&#34;</span>, start_prompt),
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pipeline_prompt <span style="color:#f92672">=</span> PipelinePromptTemplate(
+</span></span><span style="display:flex;"><span>    final_prompt<span style="color:#f92672">=</span>full_prompt, pipeline_prompts<span style="color:#f92672">=</span>input_prompts
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;组合后模版的可传递参数 &#34;</span>, pipeline_prompt<span style="color:#f92672">.</span>input_variables, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(
+</span></span><span style="display:flex;"><span>    pipeline_prompt<span style="color:#f92672">.</span>format(
+</span></span><span style="display:flex;"><span>        person<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;小栈&#34;</span>,
+</span></span><span style="display:flex;"><span>        example_q<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;你最喜欢的brand是什么&#34;</span>,
+</span></span><span style="display:flex;"><span>        example_a<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Apple&#34;</span>,
+</span></span><span style="display:flex;"><span>        input<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;你最喜欢的App是什么&#34;</span>,
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><img loading="lazy" src="/img/langchain-demo05.png" alt=""  />
+</p>
+<p>这样的写法看上去比较复杂，但是当我们遇到比较大的 prompt 模版，并且可以通过复用之前写过的 prompt 模版时，这样子的操作可以提升效率</p>
 
 
   </div>
