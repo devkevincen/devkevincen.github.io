@@ -142,55 +142,10 @@ name="msapplication-TileColor" content="#2e2e33"> <link
     </nav>
 </header>
 <main class="main"> 
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>你好，我是程序员小栈 👋</h1>
-    </header>
-    <div class="entry-content">
-        欢迎来到我的博客
-    </div>
-    <footer class="entry-footer">
-        <div class="social-icons" >
-</div>
-
-    </footer>
-</article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Hooks: useEffect
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2024-06-13 18:03:31 +0800 CST'>六月 13, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Hooks: useEffect" href="https://www.coderstack.site/post/react/useeffect/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">LangChain: Prompts
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>LangChain 系列的文章，使用的 Python 版本为 3.11.4，LangChain 版本为 v0.2
-API 可能会有变动，请以官方文档为准
-优秀的提示词： 【立角色】：引导 AI 进入具体场景，赋予其行家身份 【述问题】：告诉 AI 你的困惑和问题，以及背景信息 【定目标】：告诉 AI 你的需求，希望达成的目标 【补要求】：告诉 AI 回答时注意什么，或者如何回复 不好的提示词：我想去海南玩，请你帮我做一份旅行攻路
-好的提示词：假如你是导游，我要到海南游玩，预算一万元，旅行人数三个人，行程7天，请称我做一份旅行政略，请注量：我不喜欢行程太紧凑，我不喜欢网红景点，更喜欢有文化底蕴的景点，另外，推荐景点请附上各个景点的价格
-提示词模版： 将提示词提炼成模板 实现提示词的复用、版本管理、动态变化等 以上面的好的提示词举例：
-假如你是导游，我要到 {place} 游玩，预算 {budget}，旅行人数 {numberofpeople} 个人，行程 {numberofdays} 天，请称我做一份旅行政略，请注量：我不喜欢 {dontlike}，更喜欢 {like}，另外，{additional}。
-将一条固定的提示词，进行提炼，来实现提示词的复用，即为提示词模版。像极了一个函数，传入所需要的参数，返回一定内容， y = f(x1, x2, ...)
-Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.prompts import PromptTemplate prompt_template = PromptTemplate.from_template(&#34;你是一位起名大师，帮我起{number}个具有{country}特色的{sex}名字&#34;) prompt_template.format(number=1, country=&#39;中国&#39;, sex=&#39;女孩&#39;) 很像 JS 中的模版字符串，对吧 🤔
-对话模版 ChatPromptTemplate from langchain_core.prompts import ChatPromptTemplate chat_template = ChatPromptTemplate....</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-06-13 10:06:21 +0800 CST'>六月 13, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to LangChain: Prompts" href="https://www.coderstack.site/post/langchain/prompts/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">前端常见面试题：CSS篇
+    <h2 class="entry-hint-parent">前端常见面试题：框架篇
     </h2>
   </header>
   <div class="entry-content">
@@ -200,58 +155,50 @@ Prompt Templates 提示此模版 字符串模版 PromptTemplate from langchain.p
 🟢 频率：很高
 🟠 频率：适中
 🔴 频率：较少
-CSS 两栏布局 三栏布局 BFC CSS3 中有哪些新特性 CSS 盒模型 CSS 有哪些常用单位 隐藏元素的方法有哪些 CSS 选择器及其优先级 </p>
+React 聊一聊 React 的事件机制 Vue </p>
   </div>
   <footer class="entry-footer"><span title='2024-06-13 01:40:07 +0800 CST'>六月 13, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to 前端常见面试题：CSS篇" href="https://www.coderstack.site/post/interview/frontend-interview-china-css/"></a>
+  <a class="entry-link" aria-label="post link to 前端常见面试题：框架篇" href="https://www.coderstack.site/post/interview/frontend-interview-china-framework/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">前端常见面试题：HTML篇
+    <h2 class="entry-hint-parent">Github 配置 SSH
     </h2>
   </header>
   <div class="entry-content">
-    <p>争取做到一篇文章，解决前端面试问题
-文章中提到的面试考察频率，仅代表本人参加 2024 届秋招过程中所遇到的情况
-考察频率仅有三种情况：
-🟢 频率：很高
-🟠 频率：适中
-🔴 频率：较少
-HTML 对 HTML 语义化的理解 🟠 频率：适中
-HTML 语义化是指在编写 HTML 文档时，使用恰当的标签，以及正确的结构来描述文档的内容、结构和意义。比如 header 就是放一些头部的标签，footer 就是放一些底部的标签。这么做有几点好处：
-对机器友好，更适合搜索引擎的爬虫爬取有效信息，有利于 SEO。 对开发者友好，使用语义类标签增强了可读性，结构更加清晰，开发者能清晰地看出网页的结构，便于开发与维护。 SEO(Search Engine Optimization): 搜索引擎优化，为了让用户在搜索和网站相关的关键词的时候，可以使网站在搜索引擎的排名尽量靠前，从而增加流量。
-常见的语义化标签有哪些 🔴 频率：较少
-&lt;header&gt; 头部 &lt;nav&gt; 导航栏 &lt;article&gt; 主要内容 &lt;aside&gt; 侧边栏 &lt;footer&gt; 底部 该图片选自 菜鸟教程
-行内元素、块级元素、行内块元素的的特点？分别有哪些 🟠 频率：适中
-行内元素：
-一行可以显示多个 不可以设置宽高 宽度和高度默认由内容撑开 padding 左右可以设置，上下设置不占位 （浏览器中可以去验证一下） margin 左右可以设置，上下设置不生效 （浏览器中可以去验证一下） 行内元素有 span a b i 等等 块级元素：
-独占一行 可以设置宽高 宽度默认是父元素的宽度（父元素宽度 100%），高度默认由内容撑开 margin、padding 上下左右都有效 块级元素有 h1-h6 div p 等等 行内块元素：...</p>
+    <p>1. 检查你的电脑是否已经存在 SSH key ls -al ~/.ssh 如果存在，会显示 id_rsa 和 id_rsa.pub 两个文件，跳到第三步骤
+2. 生成新的 SSH key 指令中的 your_email@example.com 部分，替换为你注册 GitHub 时的邮箱 https://github.com/settings/emails
+ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34; 出现的提示一路回车即可
+3. 添加新的 SSH key 到 Github 执行以下命令，并复制输出结果
+cat ~/.ssh/id_ed25519.pub 访问 https://github.com/settings/keys，点击下图所示。
+将刚才复制的输出结果，进行粘贴。
+4. 测试是否成功 ssh -T git@github.com 完成 🎉 </p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-13 01:40:07 +0800 CST'>六月 13, 2024</span>&nbsp;·&nbsp;134 字&nbsp;·&nbsp;程序员小栈</footer>
-  <a class="entry-link" aria-label="post link to 前端常见面试题：HTML篇" href="https://www.coderstack.site/post/interview/frontend-interview-china-html/"></a>
+  <footer class="entry-footer"><span title='2024-06-13 00:26:04 +0800 CST'>六月 13, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Github 配置 SSH" href="https://www.coderstack.site/post/knowledge/config-ssh-github/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">前端常见面试题：JavaScript篇
+    <h2 class="entry-hint-parent">安装 Homebrew
     </h2>
   </header>
   <div class="entry-content">
-    <p> 争取做到一篇文章，解决前端面试问题
-文章中提到的面试考察频率，仅代表本人参加 2024 届秋招过程中所遇到的情况
-考察频率仅有三种情况：
-🟢 频率：很高
-🟠 频率：适中
-🔴 频率：较少
-JavaScript </p>
+    <p>前提 电脑中已安装 Git
+（新电脑到手/重装新系统后，强烈建议，首先去执行一次 xcode-select --install，即可安装一些基本的开发工具，如 Git）
+无科学上网 国内同学直接使用 Homebrew 官方的脚本，无科学上网，基本不可能一次安装成功
+使用国内镜像，可以参考 https://gitee.com/cunkai/HomebrewCN
+科学上网 Homebrew 官方链接 https://brew.sh/
+开启 TUN 模式，使得终端这类软件也同样走代理。只要梯子稳定，即可通过官网脚本一次安装成功</p>
   </div>
-  <footer class="entry-footer"><span title='2024-06-13 01:40:07 +0800 CST'>六月 13, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to 前端常见面试题：JavaScript篇" href="https://www.coderstack.site/post/interview/frontend-interview-china-javascript/"></a>
+  <footer class="entry-footer"><span title='2024-06-12 23:25:00 +0800 CST'>六月 12, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to 安装 Homebrew" href="https://www.coderstack.site/post/macos/install-homebrew/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
-    <a class="next" href="https://www.coderstack.site/page/2/">下一页&nbsp;&nbsp;»
+    <a class="prev" href="https://www.coderstack.site/">
+      «&nbsp;上一页&nbsp;
     </a>
   </nav>
 </footer>
