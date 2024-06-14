@@ -9,12 +9,12 @@
 />
 <meta name="robots" content="index, follow" />
 <title>
-  Posts | 程序员小栈
+  前端面试篇 😎 | 程序员小栈
 </title>
 <meta
   name="keywords"
   content=""
-/> <meta name="description" content="Posts - 程序员小栈"> <meta name="author" content=""> <link rel="canonical" href="https://www.coderstack.site/post/">
+/> <meta name="description" content="希望通过一个系列，减少你四处寻找优质答案的时间"> <meta name="author" content=""> <link rel="canonical" href="https://www.coderstack.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">
 <link
   crossorigin="anonymous"
   href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css"
@@ -32,9 +32,9 @@ content="#2e2e33"> <meta
 name="msapplication-TileColor" content="#2e2e33"> <link
   rel="alternate"
   type="application/rss+xml"
-  href="https://www.coderstack.site/post/index.xml"
+  href="https://www.coderstack.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/index.xml"
 />
-<link rel="alternate" hreflang="zh" href="https://www.coderstack.site/post/" />
+<link rel="alternate" hreflang="zh" href="https://www.coderstack.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" />
 <noscript>
   <style>
     #theme-toggle,
@@ -72,13 +72,13 @@ name="msapplication-TileColor" content="#2e2e33"> <link
 </noscript>
   
 
-<meta property="og:title" content="Posts" />
+<meta property="og:title" content="前端面试篇 😎" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.coderstack.site/post/" />
+<meta property="og:url" content="https://www.coderstack.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:title" content="前端面试篇 😎"/>
 <meta name="twitter:description" content=""/>
 
 
@@ -92,6 +92,12 @@ name="msapplication-TileColor" content="#2e2e33"> <link
       "position":  1 ,
       "name": "Posts",
       "item": "https://www.coderstack.site/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "前端面试篇 😎",
+      "item": "https://www.coderstack.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"
     }
   ]
 }
@@ -149,79 +155,56 @@ name="msapplication-TileColor" content="#2e2e33"> <link
 <main class="main"> 
 <header class="page-header">
   <h1>
-    Posts
+    前端面试篇 😎
   </h1>
 </header>
+<div class="post-content"><p>希望通过一个系列，减少你四处寻找优质答案的时间</p>
+
+
+</div>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Github 配置 SSH
+    <h2 class="entry-hint-parent">前端常见面试题：CSS篇
     </h2>
   </header>
   <div class="entry-content">
-    <p>1. 检查你的电脑是否已经存在 SSH key ls -al ~/.ssh 如果存在，会显示 id_rsa 和 id_rsa.pub 两个文件，跳到第三步骤
-2. 生成新的 SSH key 指令中的 your_email@example.com 部分，替换为你注册 GitHub 时的邮箱 https://github.com/settings/emails
-ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34; 出现的提示一路回车即可
-3. 添加新的 SSH key 到 Github 执行以下命令，并复制输出结果
-cat ~/.ssh/id_ed25519.pub 访问 https://github.com/settings/keys，点击下图所示。
-将刚才复制的输出结果，进行粘贴。
-4. 测试是否成功 ssh -T git@github.com 完成 🎉 </p>
-  </div>
-  <footer class="entry-footer"><span title='2024-06-13 00:26:04 +0800 CST'>六月 13, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Github 配置 SSH" href="https://www.coderstack.site/post/knowledge/config-ssh-github/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">安装 Homebrew
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>前提 电脑中已安装 Git
-（新电脑到手/重装新系统后，强烈建议，首先去执行一次 xcode-select --install，即可安装一些基本的开发工具，如 Git）
-无科学上网 国内同学直接使用 Homebrew 官方的脚本，无科学上网，基本不可能一次安装成功
-使用国内镜像，可以参考 https://gitee.com/cunkai/HomebrewCN
-科学上网 Homebrew 官方链接 https://brew.sh/
-开启 TUN 模式，使得终端这类软件也同样走代理。只要梯子稳定，即可通过官网脚本一次安装成功</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-06-12 23:25:00 +0800 CST'>六月 12, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to 安装 Homebrew" href="https://www.coderstack.site/post/macos/install-homebrew/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">React ⚛︎
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>最值得学习的前端框架</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-06-13 18:01:58 +0800 CST'>六月 13, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to React ⚛︎" href="https://www.coderstack.site/post/react/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">LangChain 🦜
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>一起进入 AI 时代</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-06-13 10:05:14 +0800 CST'>六月 13, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to LangChain 🦜" href="https://www.coderstack.site/post/langchain/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">前端面试篇 😎
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>希望通过一个系列，减少你四处寻找优质答案的时间</p>
+    <p> 争取做到一篇文章，解决前端面试问题
+文章中提到的面试考察频率，仅代表本人参加 2024 届秋招过程中所遇到的情况
+考察频率仅有三种情况：
+🟢 频率：很高
+🟠 频率：适中
+🔴 频率：较少
+CSS JavaScript 框架 React 聊一聊 React 的事件机制 Vue </p>
   </div>
   <footer class="entry-footer"><span title='2024-06-13 01:40:07 +0800 CST'>六月 13, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to 前端面试篇 😎" href="https://www.coderstack.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"></a>
+  <a class="entry-link" aria-label="post link to 前端常见面试题：CSS篇" href="https://www.coderstack.site/post/interview/frontend-interview-china-css/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">前端常见面试题：HTML篇
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>争取做到一篇文章，解决前端面试问题
+文章中提到的面试考察频率，仅代表本人参加 2024 届秋招过程中所遇到的情况
+考察频率仅有三种情况：
+🟢 频率：很高
+🟠 频率：适中
+🔴 频率：较少
+HTML 对 HTML 语义化的理解 🟠 频率：适中
+HTML 语义化是指在编写 HTML 文档时，使用恰当的标签，以及正确的结构来描述文档的内容、结构和意义。比如 header 就是放一些头部的标签，footer 就是放一些底部的标签。这么做有几点好处：
+对机器友好，更适合搜索引擎的爬虫爬取有效信息，有利于 SEO。 对开发者友好，使用语义类标签增强了可读性，结构更加清晰，开发者能清晰地看出网页的结构，便于开发与维护。 SEO(Search Engine Optimization): 搜索引擎优化，为了让用户在搜索和网站相关的关键词的时候，可以使网站在搜索引擎的排名尽量靠前，从而增加流量。
+常见的语义化标签有哪些 🔴 频率：较少
+&lt;header&gt; 头部 &lt;nav&gt; 导航栏 &lt;article&gt; 主要内容 &lt;aside&gt; 侧边栏 &lt;footer&gt; 底部 该图片选自 菜鸟教程
+行内元素、块级元素、行内块元素的的特点？分别有哪些 🟠 频率：适中
+行内元素：
+一行可以显示多个 不可以设置宽高 宽度和高度默认由内容撑开 padding 左右可以设置，上下设置不占位 （浏览器中可以去验证一下） margin 左右可以设置，上下设置不生效 （浏览器中可以去验证一下） 行内元素有 span a b i 等等 块级元素：
+独占一行 可以设置宽高 宽度默认是父元素的宽度（父元素宽度 100%），高度默认由内容撑开 margin、padding 上下左右都有效 块级元素有 h1-h6 div p 等等 行内块元素：...</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-06-13 01:40:07 +0800 CST'>六月 13, 2024</span>&nbsp;·&nbsp;133 字&nbsp;·&nbsp;程序员小栈</footer>
+  <a class="entry-link" aria-label="post link to 前端常见面试题：HTML篇" href="https://www.coderstack.site/post/interview/frontend-interview-china-html/"></a>
 </article>
     </main>
     

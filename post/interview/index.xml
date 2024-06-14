@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>前端面试篇 😎 on 程序员小栈</title>
+    <link>//localhost:1313/post/interview/</link>
+    <description>Recent content in 前端面试篇 😎 on 程序员小栈</description>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 13 Jun 2024 01:40:07 +0800</lastBuildDate>
+    <atom:link href="//localhost:1313/post/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>前端常见面试题：CSS篇</title>
+      <link>//localhost:1313/post/interview/frontend-interview-china-css/</link>
+      <pubDate>Thu, 13 Jun 2024 01:40:07 +0800</pubDate>
+      <guid>//localhost:1313/post/interview/frontend-interview-china-css/</guid>
+      <description> 争取做到一篇文章，解决前端面试问题
+文章中提到的面试考察频率，仅代表本人参加 2024 届秋招过程中所遇到的情况
+考察频率仅有三种情况：
+🟢 频率：很高
+🟠 频率：适中
+🔴 频率：较少
+CSS JavaScript 框架 React 聊一聊 React 的事件机制 Vue </description>
+    </item>
+    <item>
+      <title>前端常见面试题：HTML篇</title>
+      <link>//localhost:1313/post/interview/frontend-interview-china-html/</link>
+      <pubDate>Thu, 13 Jun 2024 01:40:07 +0800</pubDate>
+      <guid>//localhost:1313/post/interview/frontend-interview-china-html/</guid>
+      <description>争取做到一篇文章，解决前端面试问题
+文章中提到的面试考察频率，仅代表本人参加 2024 届秋招过程中所遇到的情况
+考察频率仅有三种情况：
+🟢 频率：很高
+🟠 频率：适中
+🔴 频率：较少
+HTML 对 HTML 语义化的理解 🟠 频率：适中
+HTML 语义化是指在编写 HTML 文档时，使用恰当的标签，以及正确的结构来描述文档的内容、结构和意义。比如 header 就是放一些头部的标签，footer 就是放一些底部的标签。这么做有几点好处：
+对机器友好，更适合搜索引擎的爬虫爬取有效信息，有利于 SEO。 对开发者友好，使用语义类标签增强了可读性，结构更加清晰，开发者能清晰地看出网页的结构，便于开发与维护。 SEO(Search Engine Optimization): 搜索引擎优化，为了让用户在搜索和网站相关的关键词的时候，可以使网站在搜索引擎的排名尽量靠前，从而增加流量。
+常见的语义化标签有哪些 🔴 频率：较少
+&amp;lt;header&amp;gt; 头部 &amp;lt;nav&amp;gt; 导航栏 &amp;lt;article&amp;gt; 主要内容 &amp;lt;aside&amp;gt; 侧边栏 &amp;lt;footer&amp;gt; 底部 该图片选自 菜鸟教程
+行内元素、块级元素、行内块元素的的特点？分别有哪些 🟠 频率：适中
+行内元素：
+一行可以显示多个 不可以设置宽高 宽度和高度默认由内容撑开 padding 左右可以设置，上下设置不占位 （浏览器中可以去验证一下） margin 左右可以设置，上下设置不生效 （浏览器中可以去验证一下） 行内元素有 span a b i 等等 块级元素：
+独占一行 可以设置宽高 宽度默认是父元素的宽度（父元素宽度 100%），高度默认由内容撑开 margin、padding 上下左右都有效 块级元素有 h1-h6 div p 等等 行内块元素：</description>
+    </item>
+  </channel>
+</rss>

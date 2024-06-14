@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Categories on 程序员小栈</title>
+    <title>分类 👾 on 程序员小栈</title>
     <link>https://www.coderstack.site/categories/</link>
-    <description>Recent content in Categories on 程序员小栈</description>
+    <description>Recent content in 分类 👾 on 程序员小栈</description>
     <generator>Hugo -- 0.127.0</generator>
     <language>zh</language>
+    <lastBuildDate>Thu, 13 Jun 2024 18:03:31 +0800</lastBuildDate>
     <atom:link href="https://www.coderstack.site/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React</title>
+      <link>https://www.coderstack.site/categories/react/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.coderstack.site/categories/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LangChain</title>
+      <link>https://www.coderstack.site/categories/langchain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.coderstack.site/categories/langchain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>前端面试</title>
+      <link>https://www.coderstack.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.coderstack.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>知识碎片</title>
+      <link>https://www.coderstack.site/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.coderstack.site/categories/%E7%9F%A5%E8%AF%86%E7%A2%8E%E7%89%87/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MacOS</title>
+      <link>https://www.coderstack.site/categories/macos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.coderstack.site/categories/macos/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

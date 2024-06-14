@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MacOS on 程序员小栈</title>
+    <link>https://www.coderstack.site/categories/macos/</link>
+    <description>Recent content in MacOS on 程序员小栈</description>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 12 Jun 2024 23:25:00 +0800</lastBuildDate>
+    <atom:link href="https://www.coderstack.site/categories/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装 Homebrew</title>
+      <link>https://www.coderstack.site/post/macos/install-homebrew/</link>
+      <pubDate>Wed, 12 Jun 2024 23:25:00 +0800</pubDate>
+      <guid>https://www.coderstack.site/post/macos/install-homebrew/</guid>
+      <description>前提 电脑中已安装 Git
+（新电脑到手/重装新系统后，强烈建议，首先去执行一次 xcode-select --install，即可安装一些基本的开发工具，如 Git）
+无科学上网 国内同学直接使用 Homebrew 官方的脚本，无科学上网，基本不可能一次安装成功
+使用国内镜像，可以参考 https://gitee.com/cunkai/HomebrewCN
+科学上网 Homebrew 官方链接 https://brew.sh/
+开启 TUN 模式，使得终端这类软件也同样走代理。只要梯子稳定，即可通过官网脚本一次安装成功</description>
+    </item>
+  </channel>
+</rss>
